@@ -2,20 +2,17 @@
 
 Javascript is an interpreted language.
 
-# Types in Javascript 
+# Types in Javascript
 
- - Number 
- - String
- - boolean
- - null
- - undefined
+- Number
+- String
+- boolean
+- null
+- undefined
 
  > Everything in Javascript is an object.
-
  > You can see the type of a variable by using typeof()
-
  > typeof(typeof(undefined)) --> string
-
  > typeof(NaN) --> number
 
 ## Type Coercion
@@ -56,6 +53,7 @@ console.log(a === b) // false because not a number means anything. This can also
 
 var a = new Array();
  > Javascript uses constructor functions to create objects.
+
 ```js
 var a = [];
 var b = [1, 2, 3, "hello"]; // this is possible because everything in js is an object. This is a key value pair with indices.
@@ -109,7 +107,6 @@ In Javascript, a function can have no name. So, you can call a function immediat
 (function() { console.log("immediately invoked function")})()
 ```
 
-
 ## Global namespace In Javascript
 
 Anything you create in Javascript gets attached to the global namespace which is called **window**.
@@ -146,10 +143,10 @@ test(1,2,3);
 
 > Arguments is a array like structure(we cannot use common array functions in arguments). How to convert it into a typical array ?
 
-
 ## Hoisting
 
 All variables in javascript are hoisted to the top of the function.
+
 ```js
 var a = 10;
 function abc() {
@@ -176,9 +173,8 @@ console.log(a[b]) // output : 456
 ## Constructor Functions
 
 > In ES6 JS, you can use keywords like class etc.
-
-
 > In javascript, classes are constructor functions.
+
 ```js
 function Dog(name, breed) { // Constructor function name needs to start with capital character.
     this.name = name;
@@ -189,7 +185,7 @@ var d = new Dog('tommy', 'desi')
 console.log(d.name);
 ```
 
-## Proto 
+## Proto
 
 In Javascript, inheritance happens using proto. Proto is an internal property of an object.
 
@@ -229,7 +225,6 @@ console.log(a.calculate(20));
 
 Prototype is useful because you declare all the generic functions and properties in one place and you make the objects point to that place. So memory is saved because prototype is a public property and it is not created again and again.
 
-
 ## Some tricky output questions
 
 ```js
@@ -252,11 +247,10 @@ foo1() --> returns {bar: "hellow"}
 foo2() --> returns undefined // this is because JS adds semicolon after every statement that doesn't have a semi colon.
 ```
 
-
 ## Call, Bind and Apply
 
-
 Call is used to change the context of this
+
 ```js
 var pokemon = {
     firstname: 'pika';
@@ -278,6 +272,7 @@ pokemon.log(Math.max.apply(this, a));
 var pokemonBinded = pokemonName.bind('food', 'jumping'); // bind helps you save the context.
 
 ```
+
 > The only different between call and apply is the different in which parameters are passed.
 
 ## Closure
@@ -295,21 +290,7 @@ function makeWorker() {
 
 var name = "John";
 
-var worker = makeWorker();;
+var worker = makeWorker();
 
 worker(); // the value of name in the function is retained although it's not in scope.
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
